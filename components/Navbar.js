@@ -15,7 +15,7 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', fn);
     }, []);
 
-    const links = ['Despre', 'Galerie', 'Facilități', 'Review-uri'];
+    const links = ['Despre', 'Galerie', 'Facilități', 'Review-uri', 'Tarife'];
 
     return (
         <nav
@@ -70,11 +70,11 @@ export default function Navbar() {
                     </ul>
                     <div className="d-flex align-items-center mt-3 mt-lg-0">
                         <a
-                            href="#book"
+                            href="tel:+40721335079"
                             className="btn-ct-primary"
                             onClick={() => setOpen(false)}
                         >
-                            Rezervă Acum!
+                            +40 721 335 079
                         </a>
                     </div>
                 </div>

@@ -3,8 +3,9 @@ import treeIcon from '../src/assets/tree.png';
 import firma from '../src/assets/FIRMA_LOGO.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import MapEmbed from './MapEmbed';
 
-const quickLinks = ['Our Story', 'Gallery', 'Amenities', 'Local Guide'];
+const quickLinks = ['Despre', 'Galerie', 'Facilități', 'Review-uri', 'Tarife'];
 const supportLinks = [
     'FAQ',
     'Cancellation Policy',
@@ -14,9 +15,9 @@ const supportLinks = [
 const contact = [
     {
         icon: 'bi-geo-alt',
-        text: '123 Hidden Pine Road, Whispering Woods, WA 98503',
+        text: 'Jud. Arad, Sat Botfei, 1km de la iesire prima cabana cu pescarie',
     },
-    { icon: 'bi-telephone', text: '+1 (800) 723-4087' },
+    { icon: 'bi-telephone', text: '+40 721 335 079' },
     { icon: 'bi-envelope', text: 'hello@cabanatraila.com' },
 ];
 
@@ -63,26 +64,20 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div className="col-6 col-sm-3 col-lg-2">
-                        <span className="ct-footer-title">Quick Links</span>
+                        <span className="ct-footer-title">Link-uri rapide</span>
                         {quickLinks.map((l) => (
-                            <a key={l} href="#" className="ct-footer-link">
-                                {l}
-                            </a>
-                        ))}
-                    </div>
-
-                    {/* Support */}
-                    <div className="col-6 col-sm-3 col-lg-2">
-                        <span className="ct-footer-title">Support</span>
-                        {supportLinks.map((l) => (
-                            <a key={l} href="#" className="ct-footer-link">
+                            <a
+                                key={l}
+                                href={`#${l.toLowerCase()}`}
+                                className="ct-footer-link"
+                            >
                                 {l}
                             </a>
                         ))}
                     </div>
 
                     {/* Contact */}
-                    <div className="col-12 col-lg-4">
+                    <div className="col-6 col-sm-3 col-lg-2">
                         <span className="ct-footer-title">Contact</span>
                         {contact.map((c) => (
                             <div key={c.text} className="d-flex gap-2 mb-3">
@@ -105,6 +100,12 @@ export default function Footer() {
                                 </span>
                             </div>
                         ))}
+                    </div>
+
+                    {/* Harta */}
+                    <div className="col-12 col-lg-4">
+                        <span className="ct-footer-title">Hartă</span>
+                        <MapEmbed />
                     </div>
                 </div>
 

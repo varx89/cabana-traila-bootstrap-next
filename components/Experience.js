@@ -23,11 +23,24 @@ export default function Experience() {
                                 className="rounded-3 overflow-hidden"
                                 style={{ aspectRatio: '4/3' }}
                             >
-                                <img
+                                {/* <img
                                     src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=900&q=80"
                                     alt="Cabin interior with stone fireplace"
                                     className="w-100 h-100 object-fit-cover"
-                                />
+                                /> */}
+                                <video
+                                    className="w-100 h-100 object-fit-cover"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                >
+                                    <source
+                                        src="/video/cabana.mp4"
+                                        type="video/mp4"
+                                    />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                             {/* Rating badge */}
                             {/* <div className="ct-rating-badge">
