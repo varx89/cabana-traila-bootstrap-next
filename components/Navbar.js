@@ -28,7 +28,6 @@ export default function Navbar() {
                     href="#"
                 >
                     <span>
-                        {/*🌲*/}
                         <Image
                             src={treeIcon}
                             style={{ height: '25px', width: '25px' }}
@@ -37,6 +36,17 @@ export default function Navbar() {
                     </span>
                     Cabana Trăila
                 </a>
+
+                {/* Phone button — visible only on mobile (collapsed state), hidden on lg+ */}
+                <div className="d-flex align-items-center d-lg-none">
+                    <a
+                        href="tel:+40749942568"
+                        className="btn-ct-primary"
+                        onClick={() => setOpen(false)}
+                    >
+                        +40 749 942 568
+                    </a>
+                </div>
 
                 {/* Toggler */}
                 <button
@@ -48,7 +58,7 @@ export default function Navbar() {
                     <span className="navbar-toggler-icon" />
                 </button>
 
-                {/* Links */}
+                {/* Links + phone button inside collapse (visible on lg+) */}
                 <div
                     className={`collapse navbar-collapse ${open ? 'show' : ''}`}
                 >
@@ -68,13 +78,15 @@ export default function Navbar() {
                             </li>
                         ))}
                     </ul>
-                    <div className="d-flex align-items-center mt-3 mt-lg-0">
+
+                    {/* Phone button — visible on lg+ after the links */}
+                    <div className="d-flex align-items-center">
                         <a
-                            href="tel:+40721335079"
+                            href="tel:+40749942568"
                             className="btn-ct-primary"
                             onClick={() => setOpen(false)}
                         >
-                            +40 721 335 079
+                            +40 749 942 568
                         </a>
                     </div>
                 </div>

@@ -17,8 +17,8 @@ const contact = [
         icon: 'bi-geo-alt',
         text: 'Jud. Arad, Sat Botfei, 1km de la iesire prima cabana cu pescarie',
     },
-    { icon: 'bi-telephone', text: '+40 721 335 079' },
-    { icon: 'bi-envelope', text: 'hello@cabanatraila.com' },
+    { icon: 'bi-telephone', text: '+40 749 942 568' },
+    { icon: 'bi-envelope', text: 'cabanalatraila@gmail.com' },
 ];
 
 export default function Footer() {

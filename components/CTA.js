@@ -151,7 +151,7 @@ export default function CTA() {
                                         marginBottom: '24px',
                                     }}
                                 >
-                                    <span
+                                    {/* <span
                                         style={{
                                             fontFamily:
                                                 "'Playfair Display', Georgia, serif",
@@ -175,7 +175,7 @@ export default function CTA() {
                                         }}
                                     >
                                         {plan.currency}
-                                    </span>
+                                    </span> */}
                                 </div>
 
                                 {/* Divider */}
