@@ -25,14 +25,14 @@ export default function Gallery() {
     const [page, setPage] = useState(0);
     const [lightbox, setLightbox] = useState(null);
 
-    useEffect(() => {
-        fetch('/api/images/gallery')
-            .then((r) => r.json())
-            .then((d) => {
-                if (d.images?.length) setImages(d.images);
-            })
-            .catch(() => {});
-    }, []);
+    // useEffect(() => {
+    //     fetch('/api/images/gallery')
+    //         .then((r) => r.json())
+    //         .then((d) => {
+    //             if (d.images?.length) setImages(d.images);
+    //         })
+    //         .catch(() => {});
+    // }, []);
 
     const totalPages = Math.ceil(images.length / PER_PAGE);
     const visible = images.slice(page * PER_PAGE, (page + 1) * PER_PAGE);

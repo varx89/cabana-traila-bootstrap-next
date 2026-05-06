@@ -1,25 +1,21 @@
 'use client';
 import { useState, useEffect, useCallback } from 'react';
 
-const FALLBACK = [
-    'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1800&q=80',
-    'https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1800&q=80',
-    'https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=1800&q=80',
-];
+const FALLBACK = ['/hero/1.jpeg', '/hero/2.jpeg', '/hero/3.jpeg'];
 
 export default function Hero() {
     const [images, setImages] = useState(FALLBACK);
     const [current, setCurrent] = useState(0);
     const [fading, setFading] = useState(false);
 
-    useEffect(() => {
-        fetch('/api/images/hero')
-            .then((r) => r.json())
-            .then((d) => {
-                if (d.images?.length) setImages(d.images);
-            })
-            .catch(() => {});
-    }, []);
+    // useEffect(() => {
+    //     fetch('/api/images/hero')
+    //         .then((r) => r.json())
+    //         .then((d) => {
+    //             if (d.images?.length) setImages(d.images);
+    //         })
+    //         .catch(() => {});
+    // }, []);
 
     const goTo = useCallback(
         (idx) => {
