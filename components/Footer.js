@@ -16,9 +16,18 @@ const contact = [
     {
         icon: 'bi-geo-alt',
         text: 'Jud. Arad, Sat Botfei, 1km de la iesire prima cabana cu pescarie',
+        link: 'https://www.google.com/maps?ll=46.567399,22.083997&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=6881615167545825205',
     },
-    { icon: 'bi-telephone', text: '+40 749 942 568' },
-    { icon: 'bi-envelope', text: 'cabanalatraila@gmail.com' },
+    {
+        icon: 'bi-telephone',
+        text: '+40 749 942 568',
+        link: 'tel:+40749942568',
+    },
+    {
+        icon: 'bi-envelope',
+        text: 'cabanalatraila@gmail.com',
+        link: 'mailto:cabanalatraila@gmail.com',
+    },
 ];
 
 export default function Footer() {
@@ -89,15 +98,17 @@ export default function Footer() {
                                         marginTop: '2px',
                                     }}
                                 />
-                                <span
+                                <a
+                                    href={c.link}
                                     style={{
                                         fontSize: '12px',
                                         color: 'rgba(200,169,122,0.55)',
                                         lineHeight: 1.6,
+                                        textDecoration: 'none',
                                     }}
                                 >
                                     {c.text}
-                                </span>
+                                </a>
                             </div>
                         ))}
                     </div>
